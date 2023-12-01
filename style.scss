@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.25;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.toggle {
+    display: none;
+}
+
+.app {
+}
+
+.collapsible {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary-background-1, #fff9f5);
+  padding: 0 20px;
+}
+
+.collapsible__wrapper {
+  max-width: auto 1024px;
+}
+
+.collapsible__head {
+  padding-top: 50px;
+
+  .collapsible__head--title {
+    color: var(--secondary-color-1, #462b20);
+    text-align: center;
+    font-family: "Instrument Serif", serif;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 61px;
+    letter-spacing: -0.58px;
+  }
+}
+
+.collapsible__body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 76px;
+  padding-bottom: 66px;
+  gap: 117px;
+}
+
+.collapsible__body--content {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding-top: 54px;
+}
+
+.collapsible__content {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  img {
+    width: 560px;
+    height: 315px;
+  }
+
+  .collapsible__content--item {
+    display: flex;
+    width: 560px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    .collapsible__item--list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+
+      .collapsible__list--article {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+
+        .collapsible__article--info {
+          display: flex;
+          width: 560px;
+          align-items: center;
+          justify-content: space-between;
+          border-top: 1px solid #F3EAE5;
+          padding-top: 18px;
+
+          .collapsible__name {
+            color: var(--secondary-color-1, #462b20);
+            font-family: Instrument Serif;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+          }
+
+          .collapsible__down {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease-in-out;
+            
+        }
+        .collapsible__down.rotate {
+          transform: rotate(180deg);
+        }
+
+        }
+      }
+
+      .collapsible__content--text {
+        color: var(--secondary-color-2, rgba(66, 41, 31, 0.85));
+        width: 499px;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.collapsible__image {
+  img {
+    width: 706px;
+    height: 991px;
+    flex-shrink: 0;
+    background: lightgray 50% / cover no-repeat, url(<path-to-image>),
+      lightgray 50% / cover no-repeat, #d9d9d9;
+  }
+}
+
+// responsive
+
+@media only screen and (max-width: 468px) {
+  .collapsible__body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 76px;
+    padding-bottom: 66px;
+    .collapsible__body--content {
+      padding: 0;
+    }
+  }
+
+  .collapsible__image {
+    img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .collapsible__content--text {
+    text-align: center;
+  }
+}
+
+@media (min-width: 469px) and (max-width: 1428px) {
+  .collapsible__body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 76px;
+    padding-bottom: 66px;
+    .collapsible__body--content {
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: 1429px) and (max-width: 1699px) {
+  .collapsible__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 76px;
+    padding-bottom: 66px;
+  }
+  .collapsible__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
