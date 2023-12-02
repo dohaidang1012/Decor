@@ -167,37 +167,62 @@ a {
 }
 
 // responsive
-@media only screen and (max-width: 468px) {
+@media only screen and (max-width: 633px) {
+  .app {
+    width: 100%;
+  }
+  .collapsible {
+    min-width: 440px;
+    
+    .collapsible__wrapper {
+      width: 100%;
+    }
+  }
   .collapsible__body {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin-top: 76px;
     padding-bottom: 66px;
-    .collapsible__body--content {
-      padding: 0;
-    }
-  }
 
-  .collapsible__image {
-    img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .collapsible__body--content {
+      width: 100%;
+      padding: 0;
+
+      .collapsible__content {
+        width: 351px;
+
+        img {
+          width: 100%;
+        }
+
+        .collapsible__content--text {
+          width: 354px;
+        }
+      }
     }
-  }
-  .collapsible__content--text {
-    text-align: center;
+    .collapsible__image {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 
-@media (min-width: 469px) and (max-width: 1458px) {
+@media (min-width: 634px) and (max-width: 1458px) {
   .collapsible__body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin-top: 76px;
     padding-bottom: 66px;
+
     .collapsible__body--content {
       padding: 0;
+    }
+
+    .collapsible__image img {
+      width: 606px;
     }
   }
 }
@@ -208,10 +233,11 @@ a {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 76px;
     padding-bottom: 66px;
-  }
-  .collapsible__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    .collapsible__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

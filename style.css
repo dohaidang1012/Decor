@@ -151,26 +151,44 @@ a {
   flex-shrink: 0;
 }
 
-@media only screen and (max-width: 468px) {
+@media only screen and (max-width: 633px) {
+  .app {
+    width: 100%;
+  }
+  .collapsible {
+    min-width: 440px;
+  }
+  .collapsible .collapsible__wrapper {
+    width: 100%;
+  }
   .collapsible__body {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin-top: 76px;
     padding-bottom: 66px;
   }
   .collapsible__body .collapsible__body--content {
+    width: 100%;
     padding: 0;
   }
-  .collapsible__image img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .collapsible__body .collapsible__body--content .collapsible__content {
+    width: 351px;
   }
-  .collapsible__content--text {
-    text-align: center;
+  .collapsible__body .collapsible__body--content .collapsible__content img {
+    width: 100%;
+  }
+  .collapsible__body .collapsible__body--content .collapsible__content .collapsible__content--text {
+    width: 354px;
+  }
+  .collapsible__body .collapsible__image {
+    width: 100%;
+  }
+  .collapsible__body .collapsible__image img {
+    width: 100%;
   }
 }
-@media (min-width: 469px) and (max-width: 1458px) {
+@media (min-width: 634px) and (max-width: 1458px) {
   .collapsible__body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -179,6 +197,9 @@ a {
   }
   .collapsible__body .collapsible__body--content {
     padding: 0;
+  }
+  .collapsible__body .collapsible__image img {
+    width: 606px;
   }
 }
 @media (min-width: 1459px) and (max-width: 1699px) {
@@ -188,7 +209,7 @@ a {
     margin-top: 76px;
     padding-bottom: 66px;
   }
-  .collapsible__image {
+  .collapsible__body .collapsible__image {
     display: flex;
     justify-content: center;
     align-items: center;
